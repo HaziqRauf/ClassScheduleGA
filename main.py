@@ -30,6 +30,7 @@ def vis(schedule):
 if __name__ == '__main__':
     schedules = []
 
+    '''
     # add schedule
     schedules.append(Schedule(201, 1201, 11101))
     schedules.append(Schedule(201, 1201, 11101))
@@ -55,6 +56,56 @@ if __name__ == '__main__':
     schedules.append(Schedule(205, 1203, 11105))
     schedules.append(Schedule(206, 1203, 11106))
     schedules.append(Schedule(206, 1203, 11106))
+    
+    '''
+
+    '''
+    # Courses
+    201 - ISP688
+    202 - ISP611
+    203 - ISP623
+    204 - TXC501
+    205 - ISP610
+    206 - CSP600
+
+    # Classes
+    1201 - CS2595A
+    1202 - CS2595B
+    1203 - CS2595C
+
+    # Lecturers
+    11101 - Dr Mastura 
+    11102 - Dr Zaki
+    11103 - Dr Nurzeatul
+    11104 - Dr ...
+    11105 - Madam Farah
+    11106 - Prof Azlinah
+    '''
+    # add schedule
+    schedules.append(Schedule('ISP688', 'CS2595A', 'Dr Mastura'))
+    schedules.append(Schedule('ISP688', 'CS2595A', 'Dr Mastura'))
+    schedules.append(Schedule('ISP611', 'CS2595A', 'Dr Zaki'))
+    schedules.append(Schedule('ISP611', 'CS2595A', 'Dr Zaki'))
+    schedules.append(Schedule('ISP623', 'CS2595A', 'Dr Nurzeatul'))
+    schedules.append(Schedule('ISP623', 'CS2595A', 'Dr Nurzeatul'))
+    schedules.append(Schedule('CSP600', 'CS2595A', 'Prof Azlinah'))
+    schedules.append(Schedule('CSP600', 'CS2595A', 'Prof Azlinah'))
+
+    schedules.append(Schedule('ISP611', 'CS2595B', 'Dr Zaki'))
+    schedules.append(Schedule('ISP611', 'CS2595B', 'Dr Zaki'))
+    schedules.append(Schedule('TXC501', 'CS2595B', 'Dr ...'))
+    schedules.append(Schedule('TXC501', 'CS2595B', 'Dr ...'))
+    schedules.append(Schedule('CSP600', 'CS2595B', 'Prof Azlinah'))
+    schedules.append(Schedule('CSP600', 'CS2595B', 'Prof Azlinah'))
+
+    schedules.append(Schedule('ISP623', 'CS2595C', 'Dr Nurzeatul'))
+    schedules.append(Schedule('ISP623', 'CS2595C', 'Dr Nurzeatul'))
+    schedules.append(Schedule('TXC501', 'CS2595C', 'Dr ...'))
+    schedules.append(Schedule('TXC501', 'CS2595C', 'Dr ...'))
+    schedules.append(Schedule('ISP610', 'CS2595C', 'Madam Farah'))
+    schedules.append(Schedule('ISP610', 'CS2595C', 'Madam Farah'))
+    schedules.append(Schedule('CSP600', 'CS2595C', 'Prof Azlinah'))
+    schedules.append(Schedule('CSP600', 'CS2595C', 'Prof Azlinah'))
 
     # optimization
     ga = GeneticOptimize(popsize=50, elite=10, maxiter=500)
@@ -63,6 +114,7 @@ if __name__ == '__main__':
     # visualization
     vis_res = []
     for r in res:
-        if r.classId == 1203:
+        if r.classId == 'CS2595A':
             vis_res.append(r)
     vis(vis_res)
+
